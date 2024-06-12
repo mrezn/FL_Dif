@@ -1,5 +1,4 @@
-# FL_Dif
-# README
+# README for FedDiff
 
 ## Overview
 
