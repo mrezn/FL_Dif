@@ -1,0 +1,3 @@
+[submodule "ref/FedFTG"]
+	path = ref/FedFTG
+	url = https://github.com/ZhangLin-PKU/FedFTG.git
