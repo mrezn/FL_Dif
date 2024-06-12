@@ -4,6 +4,7 @@
 
 This repository focuses on deploying knowledge distillation federated learning with an attention diffusion-based generator model. The overall structure of the proposed method is illustrated in the figure below, applied to CIFAR-10 and CIFAR-100 classification tasks.
 
+![Proposed Method Structure](img/diagram.jpg)
 ## Preparation
 
 ### 1. Dataset Preparation
