@@ -4,7 +4,7 @@ import os
 import random
 import numpy as np
 from models import model_choose_fn
-from methods import FedFTG
+from methods import FedDiff
 import matplotlib.pyplot as plt
 
 
@@ -77,12 +77,11 @@ def run(conf):
     res_all_performance = []
 
 
-    if conf['method'] == 'FedFTG':
-        print('Train with FedFTG+++++++++++++++++++++++++++++++')
+    if conf['method'] == 'FedDiff':
         g_model_func = lambda: model_choose_fn.choose_g_model(g_model_arch, nz=nz, nc=data_obj.channels,
                                                               img_size=data_obj.width, n_cls=out_channel)
         init_g_model = g_model_func()
-        fedavg_res = FedFTG.train_FedFTG(data_obj=data_obj, act_prob=conf['active_frac'],
+        fedavg_res = FedDiff.train_FedDiff(data_obj=data_obj, act_prob=conf['active_frac'],
                                                learning_rate=conf['lr'],
                                                batch_size=conf['bs'], epoch=conf['localE'],
                                                com_amount=conf['comm_amount'],

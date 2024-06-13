@@ -3,8 +3,7 @@ import argparse
 MODEL_ARCH = ['resnet18']
 DATASET_NAME = ['CIFAR10', 'CIFAR100']
 RULE = ['iid', 'Dirichlet']
-METHODS = ['FedAvg', 'FedProx', 'FedDyn', 'SCAFFOLD', 'MOON',
-           'FedFTG', 'FedProxGAN', 'FedDynGAN', 'SCAFFOLDGAN', 'MOONGAN']
+METHODS = ['FedDiff']
 
 
 def prepare_parser():
@@ -22,9 +21,9 @@ def prepare_parser():
                         type=str,
                         help='which model architecture is utilized to train')
     parser.add_argument('--method',
-                        default='FedAvg', choices=METHODS,
+                        default='FedDiff', choices=METHODS,
                         type=str,
-                        help='which method to be adopted, choices in {FedAvg, FedProx, FedDyn, SCAFFOLD}')
+                        help='which method to be adopted, choices in {FedDiff,}')
     parser.add_argument('--dataset', '-d',
                         default="CIFAR10", choices=DATASET_NAME,
                         type=str,

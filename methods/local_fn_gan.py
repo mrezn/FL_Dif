@@ -852,7 +852,7 @@ def train_FedGAN_common(data_obj, act_prob, learning_rate, batch_size, epoch,
                                        get_acc_loss(cent_x, cent_y, avg_model, data_obj.dataset, weight_decay)[0],
                                    'All clients':
                                        get_acc_loss(cent_x, cent_y, all_model, data_obj.dataset, weight_decay)[0],
-                                   'Ft clients':
+                                   'FD clients':
                                        get_acc_loss(cent_x, cent_y, avg_model_ft, data_obj.dataset, weight_decay)[0],
                                }, i
                                )
@@ -861,7 +861,7 @@ def train_FedGAN_common(data_obj, act_prob, learning_rate, batch_size, epoch,
                                {
                                    'Sel clients': trn_perf_sel[i][0],
                                    'All clients': trn_perf_all[i][0],
-                                   'Ft clients': trn_perf_ft[i][0]
+                                   'FD clients': trn_perf_ft[i][0]
                                }, i
                                )
 
@@ -869,7 +869,7 @@ def train_FedGAN_common(data_obj, act_prob, learning_rate, batch_size, epoch,
                                {
                                    'Sel clients': trn_perf_sel[i][1],
                                    'All clients': trn_perf_all[i][1],
-                                   'Ft clients': trn_perf_ft[i][1]
+                                   'FD clients': trn_perf_ft[i][1]
                                }, i
                                )
 
@@ -877,7 +877,7 @@ def train_FedGAN_common(data_obj, act_prob, learning_rate, batch_size, epoch,
                                {
                                    'Sel clients': tst_perf_sel[i][0],
                                    'All clients': tst_perf_all[i][0],
-                                   'Ft clients': tst_perf_ft[i][0]
+                                   'FD clients': tst_perf_ft[i][0]
                                }, i
                                )
 
@@ -885,7 +885,7 @@ def train_FedGAN_common(data_obj, act_prob, learning_rate, batch_size, epoch,
                                {
                                    'Sel clients': tst_perf_sel[i][1],
                                    'All clients': tst_perf_all[i][1],
-                                   'Ft clients': tst_perf_ft[i][1]
+                                   'FD clients': tst_perf_ft[i][1]
                                }, i
                                )
 

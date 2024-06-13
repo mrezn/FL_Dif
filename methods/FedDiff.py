@@ -1,7 +1,7 @@
 from methods.local_fn_gan import *
 
 
-def train_FedFTG(data_obj, act_prob, learning_rate, batch_size, epoch,
+def train_FedDiff(data_obj, act_prob, learning_rate, batch_size, epoch,
                  com_amount, print_per, weight_decay,
                  model_func, init_model, init_g_model, sch_step, sch_gamma,
                  save_period, suffix='', trial=True, data_path='',
